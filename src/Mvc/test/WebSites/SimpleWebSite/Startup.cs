@@ -20,10 +20,7 @@ namespace SimpleWebSite
                 .AddMvcCore()
                 .AddAuthorization()
                 .AddFormatterMappings(m => m.SetMediaTypeMappingForFormat("js", new MediaTypeHeaderValue("application/json")))
-                .AddNewtonsoftJson(options => options.SerializerSettings.Formatting = Formatting.Indented)
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+                .AddNewtonsoftJson(options => options.SerializerSettings.Formatting = Formatting.Indented);
         }
 
         public void Configure(IApplicationBuilder app)

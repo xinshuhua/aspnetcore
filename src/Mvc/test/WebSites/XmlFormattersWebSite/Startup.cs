@@ -23,8 +23,7 @@ namespace XmlFormattersWebSite
             // Add MVC services to the services container
             services.AddControllers()
                 .AddXmlDataContractSerializerFormatters()
-                .AddXmlSerializerFormatters()
-                .SetCompatibilityVersion(CompatibilityVersion);
+                .AddXmlSerializerFormatters();
 
             services.Configure<MvcOptions>(options =>
             {

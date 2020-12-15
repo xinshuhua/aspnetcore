@@ -15,10 +15,7 @@ namespace SecurityWebSite
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddControllersWithViews()
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+            services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddAntiforgery();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>

@@ -15,10 +15,7 @@ namespace ErrorPageMiddlewareWebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews()
-                .AddRazorRuntimeCompilation()
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+                .AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app)

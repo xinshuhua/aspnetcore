@@ -13,10 +13,7 @@ namespace FormatterWebSite
         {
             services
                 .AddControllers(options => options.ValidateComplexTypesIfChildValidationFails = true)
-                .AddNewtonsoftJson(options => options.SerializerSettings.Converters.Insert(0, new IModelConverter()))
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+                .AddNewtonsoftJson(options => options.SerializerSettings.Converters.Insert(0, new IModelConverter()));
         }
 
         public void Configure(IApplicationBuilder app)

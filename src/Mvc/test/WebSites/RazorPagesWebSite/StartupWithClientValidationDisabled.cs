@@ -18,10 +18,7 @@ namespace RazorPagesWebSite
             services.AddRazorPages(options =>
                 {
                     options.Conventions.AuthorizeFolder("/Admin");
-                })
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+                });
 
             services.Configure<MvcViewOptions>(o => o.HtmlHelperOptions.ClientValidationEnabled = false);
         }

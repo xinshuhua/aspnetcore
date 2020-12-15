@@ -20,10 +20,7 @@ namespace BasicWebSite
         // Set up application services
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews()
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+            services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app)

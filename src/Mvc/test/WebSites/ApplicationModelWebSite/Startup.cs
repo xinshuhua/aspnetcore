@@ -21,10 +21,7 @@ namespace ApplicationModelWebSite
                 options.Conventions.Add(new FromHeaderConvention());
                 options.Conventions.Add(new MultipleAreasControllerConvention());
                 options.Conventions.Add(new CloneActionConvention());
-            })
-#pragma warning disable CS0618
-            .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+            });
 
             services.AddRazorPages();
         }

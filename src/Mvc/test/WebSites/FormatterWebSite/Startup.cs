@@ -20,10 +20,7 @@ namespace FormatterWebSite
                 options.InputFormatters.Add(new StringInputFormatter());
             })
             .AddNewtonsoftJson(options => options.SerializerSettings.Converters.Insert(0, new IModelConverter()))
-            .AddXmlDataContractSerializerFormatters()
-#pragma warning disable CS0618
-            .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+            .AddXmlDataContractSerializerFormatters();
         }
 
         public void Configure(IApplicationBuilder app)

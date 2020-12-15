@@ -14,10 +14,7 @@ namespace BasicWebSite
             // CookieTempDataProvider is the default ITempDataProvider, so we must override it with session.
             services
                 .AddMvc()
-                .AddSessionStateTempDataProvider()
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+                .AddSessionStateTempDataProvider();
             services.AddSession();
 
             services.ConfigureBaseWebSiteAuthPolicies();

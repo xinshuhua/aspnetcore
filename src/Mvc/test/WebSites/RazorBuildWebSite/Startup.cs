@@ -17,10 +17,7 @@ namespace RazorBuildWebSite
             services.AddSingleton(fileProvider);
 
             services.AddMvc()
-                .AddRazorRuntimeCompilation(options => options.FileProviders.Add(fileProvider))
-#pragma warning disable CS0618
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+                .AddRazorRuntimeCompilation(options => options.FileProviders.Add(fileProvider));
         }
 
         public void Configure(IApplicationBuilder app)

@@ -36,10 +36,7 @@ namespace ApiExplorerWebSite
                 options.OutputFormatters.Clear();
                 options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
             })
-            .AddNewtonsoftJson()
-#pragma warning disable CS0618
-            .SetCompatibilityVersion(CompatibilityVersion.Latest);
-#pragma warning restore CS0618
+            .AddNewtonsoftJson();
 
             services.AddSingleton<ApiExplorerDataFilter>();
             services.AddSingleton<IActionDescriptorChangeProvider, ActionDescriptorChangeProvider>();
